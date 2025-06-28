@@ -1,95 +1,213 @@
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
+import { Shield, FileText, Users, Lock, CheckCircle, AlertTriangle } from "lucide-react"
+import Link from "next/link"
 
 export default function CompliancePage() {
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen py-2">
-      <div className="hero w-full py-20">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-center text-center md:text-left">
-            <div className="md:w-1/2">
-              <h1 className="text-5xl font-bold text-white mb-4">Stay Compliant with Ease</h1>
-              <p className="text-xl text-gray-300 mb-8">
-                Our compliance solutions help you navigate complex regulations and ensure your business is always
-                protected.
-              </p>
-              <Button size="lg">Get Started</Button>
-            </div>
-            <div className="md:w-1/2 flex justify-center">
-              <Card className="w-full max-w-sm bg-card-foreground text-card-foreground shadow-xl">
-                <CardHeader>
-                  <CardTitle>Request a Compliance Audit</CardTitle>
-                  <CardDescription>Fill out the form below to request a compliance audit.</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <form className="space-y-4">
-                    <div className="grid w-full gap-2">
-                      <Label htmlFor="name">Name</Label>
-                      <Input id="name" placeholder="Your Name" required />
-                    </div>
-                    <div className="grid w-full gap-2">
-                      <Label htmlFor="email">Email</Label>
-                      <Input id="email" placeholder="Your Email" type="email" required />
-                    </div>
-                    <div className="grid w-full gap-2">
-                      <Label htmlFor="company">Company</Label>
-                      <Input id="company" placeholder="Your Company" />
-                    </div>
-                  </form>
-                </CardContent>
-                <CardFooter className="flex justify-end">
-                  <Button>Submit Request</Button>
-                </CardFooter>
-              </Card>
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <section className="relative bg-focus-black py-20 md:py-28 lg:py-32">
+        <div className="container">
+          <div className="mx-auto max-w-4xl text-center">
+            <h1 className="font-display text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
+              <span className="block">Compliance e</span>
+              <span className="block bg-gradient-to-r from-focus-orange via-focus-red to-focus-teal bg-clip-text text-transparent">
+                Governança Corporativa
+              </span>
+            </h1>
+            <p className="mt-6 max-w-2xl mx-auto text-lg text-gray-300">
+              Garantimos que sua empresa esteja sempre em conformidade com as regulamentações mais rigorosas, protegendo
+              seus dados e operações com os mais altos padrões de segurança.
+            </p>
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contato">
+                <Button className="bg-focus-green hover:bg-focus-green/90 text-white">Fale com Especialista</Button>
+              </Link>
+              <Link href="/orcamento">
+                <Button
+                  variant="outline"
+                  className="border-white text-white hover:bg-white hover:text-focus-black bg-transparent"
+                >
+                  Solicitar Auditoria
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-focus-black opacity-70"></div>
+      </section>
+
+      {/* Compliance Areas */}
+      <section className="py-16 md:py-24 bg-gray-50">
+        <div className="container">
+          <div className="mx-auto max-w-2xl text-center mb-12">
+            <h2 className="font-display text-3xl font-bold tracking-tight text-focus-black sm:text-4xl">
+              Áreas de Compliance
+            </h2>
+            <p className="mt-4 text-lg text-gray-600">Cobrimos todas as principais áreas de conformidade regulatória</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="border-l-4 border-l-focus-orange">
+              <CardHeader>
+                <div className="flex items-center gap-3">
+                  <Shield className="h-8 w-8 text-focus-orange" />
+                  <CardTitle className="text-focus-black">LGPD</CardTitle>
+                </div>
+                <CardDescription>Lei Geral de Proteção de Dados Pessoais</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Implementação completa de políticas de privacidade, mapeamento de dados, e procedimentos de
+                  conformidade com a LGPD.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-l-4 border-l-focus-green">
+              <CardHeader>
+                <div className="flex items-center gap-3">
+                  <Lock className="h-8 w-8 text-focus-green" />
+                  <CardTitle className="text-focus-black">ISO 27001</CardTitle>
+                </div>
+                <CardDescription>Gestão de Segurança da Informação</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Certificação e manutenção de sistemas de gestão de segurança da informação conforme padrões
+                  internacionais.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-l-4 border-l-focus-teal">
+              <CardHeader>
+                <div className="flex items-center gap-3">
+                  <FileText className="h-8 w-8 text-focus-teal" />
+                  <CardTitle className="text-focus-black">SOX</CardTitle>
+                </div>
+                <CardDescription>Sarbanes-Oxley Act</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Controles internos e relatórios financeiros em conformidade com regulamentações de transparência
+                  corporativa.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-l-4 border-l-focus-red">
+              <CardHeader>
+                <div className="flex items-center gap-3">
+                  <Users className="h-8 w-8 text-focus-red" />
+                  <CardTitle className="text-focus-black">Trabalhista</CardTitle>
+                </div>
+                <CardDescription>Conformidade Trabalhista</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Auditoria e adequação de processos trabalhistas, contratos e políticas de recursos humanos.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-l-4 border-l-focus-orange">
+              <CardHeader>
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="h-8 w-8 text-focus-orange" />
+                  <CardTitle className="text-focus-black">Fiscal</CardTitle>
+                </div>
+                <CardDescription>Compliance Fiscal e Tributário</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Revisão e adequação de processos fiscais, tributários e obrigações acessórias.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-l-4 border-l-focus-green">
+              <CardHeader>
+                <div className="flex items-center gap-3">
+                  <AlertTriangle className="h-8 w-8 text-focus-green" />
+                  <CardTitle className="text-focus-black">Ambiental</CardTitle>
+                </div>
+                <CardDescription>Compliance Ambiental</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">
+                  Adequação às normas ambientais, licenciamentos e sustentabilidade corporativa.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div className="container mx-auto px-4 py-12">
-        <h2 className="text-3xl font-semibold text-center mb-8">Our Compliance Services</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <Card>
-            <CardHeader>
-              <CardTitle>Data Privacy Compliance</CardTitle>
-              <CardDescription>
-                Ensure your data handling practices comply with GDPR, CCPA, and other privacy regulations.
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p>We offer comprehensive data privacy assessments, policy development, and training programs.</p>
-            </CardContent>
-          </Card>
+      {/* Process Section */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container">
+          <div className="mx-auto max-w-2xl text-center mb-12">
+            <h2 className="font-display text-3xl font-bold tracking-tight text-focus-black sm:text-4xl">
+              Nosso Processo
+            </h2>
+            <p className="mt-4 text-lg text-gray-600">Metodologia estruturada para garantir compliance total</p>
+          </div>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>Financial Compliance</CardTitle>
-              <CardDescription>Meet regulatory requirements for financial reporting and compliance.</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p>Our experts help you navigate complex financial regulations and ensure accurate reporting.</p>
-            </CardContent>
-          </Card>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="mx-auto w-16 h-16 bg-focus-orange rounded-full flex items-center justify-center mb-4">
+                <span className="text-white font-bold text-xl">1</span>
+              </div>
+              <h3 className="font-semibold text-focus-black mb-2">Diagnóstico</h3>
+              <p className="text-gray-600 text-sm">Análise completa da situação atual e identificação de gaps</p>
+            </div>
 
-          <Card>
-            <CardHeader>
-              <CardTitle>Security Compliance</CardTitle>
-              <CardDescription>Protect your systems and data with robust security compliance measures.</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <p>
-                We provide security audits, vulnerability assessments, and compliance solutions for various security
-                standards.
-              </p>
-            </CardContent>
-          </Card>
+            <div className="text-center">
+              <div className="mx-auto w-16 h-16 bg-focus-green rounded-full flex items-center justify-center mb-4">
+                <span className="text-white font-bold text-xl">2</span>
+              </div>
+              <h3 className="font-semibold text-focus-black mb-2">Planejamento</h3>
+              <p className="text-gray-600 text-sm">Desenvolvimento de plano de ação personalizado</p>
+            </div>
+
+            <div className="text-center">
+              <div className="mx-auto w-16 h-16 bg-focus-teal rounded-full flex items-center justify-center mb-4">
+                <span className="text-white font-bold text-xl">3</span>
+              </div>
+              <h3 className="font-semibold text-focus-black mb-2">Implementação</h3>
+              <p className="text-gray-600 text-sm">Execução das adequações e treinamento das equipes</p>
+            </div>
+
+            <div className="text-center">
+              <div className="mx-auto w-16 h-16 bg-focus-red rounded-full flex items-center justify-center mb-4">
+                <span className="text-white font-bold text-xl">4</span>
+              </div>
+              <h3 className="font-semibold text-focus-black mb-2">Monitoramento</h3>
+              <p className="text-gray-600 text-sm">Acompanhamento contínuo e atualizações regulatórias</p>
+            </div>
+          </div>
         </div>
-      </div>
-    </main>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 md:py-24 bg-focus-black">
+        <div className="container">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              Pronto para Garantir Compliance?
+            </h2>
+            <p className="mt-4 text-lg text-gray-300">
+              Entre em contato conosco e descubra como podemos ajudar sua empresa a estar sempre em conformidade.
+            </p>
+            <div className="mt-8">
+              <Link href="/contato">
+                <Button className="bg-focus-orange hover:bg-focus-orange/90 text-white">Falar com Especialista</Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   )
 }
