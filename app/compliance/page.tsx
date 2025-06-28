@@ -23,17 +23,9 @@ export default function CompliancePage() {
               Garantimos que sua empresa esteja sempre em conformidade com as regulamentações mais rigorosas, protegendo
               seus dados e operações com os mais altos padrões de segurança.
             </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contato">
-                <Button className="bg-focus-green hover:bg-focus-green/90 text-white">Fale com Especialista</Button>
-              </Link>
+            <div className="mt-8">
               <Link href="/orcamento">
-                <Button
-                  variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-focus-black bg-transparent"
-                >
-                  Solicitar Auditoria
-                </Button>
+                <Button className="bg-focus-green hover:bg-focus-green/90 text-white">Fale com Especialista</Button>
               </Link>
             </div>
           </div>
@@ -204,7 +196,7 @@ export default function CompliancePage() {
               Entre em contato conosco e descubra como podemos ajudar sua empresa a estar sempre em conformidade.
             </p>
             <div className="mt-8">
-              <Link href="/contato">
+              <Link href="/orcamento">
                 <Button className="bg-focus-orange hover:bg-focus-orange/90 text-white">Falar com Especialista</Button>
               </Link>
             </div>
