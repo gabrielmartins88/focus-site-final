@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Shield, FileText, Users, Lock, CheckCircle, AlertTriangle } from "lucide-react"
 import Link from "next/link"
 import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
 
 export default function CompliancePage() {
   return (
@@ -203,6 +204,8 @@ export default function CompliancePage() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   )
 }
