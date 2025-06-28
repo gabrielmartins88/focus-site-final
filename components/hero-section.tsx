@@ -1,6 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export function HeroSection() {
   const scrollToServices = () => {
@@ -51,13 +52,15 @@ export function HeroSection() {
               >
                 Nossos Serviços
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white text-focus-orange bg-black/30 hover:bg-black/50 hover:text-white"
-              >
-                Fale Conosco
-              </Button>
+              <Link href="/contato">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-white text-focus-orange bg-black/30 hover:bg-black/50 hover:text-white"
+                >
+                  Fale Conosco
+                </Button>
+              </Link>
             </div>
           </div>
           <div className="relative h-64 md:h-auto">
