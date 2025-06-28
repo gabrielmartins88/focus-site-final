@@ -2,10 +2,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button"
 import { Shield, FileText, Users, Lock, CheckCircle, AlertTriangle } from "lucide-react"
 import Link from "next/link"
+import { Header } from "@/components/header"
 
 export default function CompliancePage() {
   return (
     <div className="min-h-screen bg-white">
+      <Header />
+
       {/* Hero Section */}
       <section className="relative bg-focus-black py-20 md:py-28 lg:py-32">
         <div className="container">
