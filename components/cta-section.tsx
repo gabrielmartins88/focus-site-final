@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export function CTASection() {
   return (
@@ -17,9 +18,11 @@ export function CTASection() {
               ter sucesso.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <Button size="lg" className="bg-white text-focus-teal hover:bg-white/90">
-                Começar Agora
-              </Button>
+              <Link href="/contato">
+                <Button size="lg" className="bg-white text-focus-teal hover:bg-white/90">
+                  Fale Conosco
+                </Button>
+              </Link>
               <Button
                 size="lg"
                 variant="outline"
