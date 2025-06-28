@@ -87,9 +87,11 @@ export function Header() {
             item.onClick ? (
               <button
                 key={item.name}
-                onClick={item.onClick}
+                onClick={() => {
+                  item.onClick?.()
+                  setMobileMenuOpen(false)
+                }}
                 className="block py-2 text-base font-medium text-gray-900 hover:text-focus-orange"
-                onClick={() => setMobileMenuOpen(false)}
               >
                 {item.name}
               </button>
