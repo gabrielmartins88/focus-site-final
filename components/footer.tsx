@@ -1,6 +1,6 @@
 import { LogoFooter } from "@/components/logo-footer"
 import Link from "next/link"
-import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Twitter } from "lucide-react"
+import { Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react"
 
 export function Footer() {
   return (
@@ -13,14 +13,6 @@ export function Footer() {
               Fornecendo soluções inovadoras para ajudar empresas a prosperarem na era digital.
             </p>
             <div className="mt-6 flex space-x-4">
-              <Link href="#" className="text-gray-400 hover:text-focus-orange">
-                <Facebook className="h-5 w-5" />
-                <span className="sr-only">Facebook</span>
-              </Link>
-              <Link href="#" className="text-gray-400 hover:text-focus-orange">
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
-              </Link>
               <Link
                 href="https://www.instagram.com/focusconsultoria_rs/"
                 target="_blank"

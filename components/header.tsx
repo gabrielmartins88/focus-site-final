@@ -37,8 +37,13 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="hidden md:block">
-          <Button className="bg-focus-orange hover:bg-focus-orange/90 text-white">Solicitar Orçamento</Button>
+        <div className="hidden md:flex md:gap-x-4">
+          <Link href="/orcamento">
+            <Button className="bg-focus-green hover:bg-focus-green/90 text-white">Solicite um orçamento</Button>
+          </Link>
+          <Link href="/carreiras">
+            <Button className="bg-focus-orange hover:bg-focus-orange/90 text-white">Faça parte da equipe</Button>
+          </Link>
         </div>
 
         {/* Mobile menu button */}
@@ -71,9 +76,16 @@ export function Header() {
               {item.name}
             </Link>
           ))}
-          <Button className="mt-4 w-full bg-focus-orange hover:bg-focus-orange/90 text-white">
-            Solicitar Orçamento
-          </Button>
+          <Link href="/orcamento">
+            <Button className="mt-4 w-full bg-focus-green hover:bg-focus-green/90 text-white">
+              Solicite um orçamento
+            </Button>
+          </Link>
+          <Link href="/carreiras">
+            <Button className="mt-4 w-full bg-focus-orange hover:bg-focus-orange/90 text-white">
+              Faça parte da equipe
+            </Button>
+          </Link>
         </div>
       </div>
     </header>
