@@ -1,6 +1,5 @@
 import { ArrowRight, BarChart3, Code, Database, Globe, Lightbulb, Shield } from "lucide-react"
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 
 const services = [
@@ -82,10 +81,6 @@ export function ServicesSection() {
               </CardFooter>
             </Card>
           ))}
-        </div>
-
-        <div className="mt-12 text-center">
-          <Button className="bg-focus-black hover:bg-focus-black/90 text-white">Ver Todos os Serviços</Button>
         </div>
       </div>
     </section>
