@@ -9,13 +9,11 @@ import { cn } from "@/lib/utils"
 
 const navItems = [
   { name: "Home", href: "/" },
+  { name: "Contato", href: "/contato" },
   { name: "Sobre nós", href: "/sobre-nos" },
   { name: "Serviços", href: "/servicos" },
+  { name: "Projeto", href: "/projeto" },
   { name: "Compliance", href: "/compliance" },
-  { name: "Privacidade de Dados", href: "/privacidade-de-dados" },
-  { name: "Vagas", href: "/vagas" },
-  { name: "Blog", href: "/blog" },
-  { name: "Contato", href: "/contato" },
 ]
 
 export function Header() {

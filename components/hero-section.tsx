@@ -3,6 +3,22 @@ import { Button } from "@/components/ui/button"
 export function HeroSection() {
   return (
     <section className="relative bg-gradient-to-br from-focus-black via-focus-black/95 to-focus-orange/20 py-20 md:py-28 lg:py-32">
+      <style>{`
+  @keyframes gradient-x {
+    0%, 100% {
+      background-size: 200% 200%;
+      background-position: left center;
+    }
+    50% {
+      background-size: 200% 200%;
+      background-position: right center;
+    }
+  }
+  .animate-gradient-x {
+    background-size: 200% 200%;
+    animation: gradient-x 6s ease-in-out infinite;
+  }
+`}</style>
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-focus-black to-focus-black/90"></div>
       </div>
@@ -11,7 +27,7 @@ export function HeroSection() {
           <div className="space-y-6">
             <h1 className="font-display text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
               <span className="block">Soluções Inovadoras</span>
-              <span className="block bg-gradient-to-r from-focus-orange via-focus-red to-focus-teal bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-focus-orange via-focus-red to-focus-teal bg-clip-text text-transparent animate-gradient-x">
                 Para Sua Empresa
               </span>
             </h1>
