@@ -1,6 +1,15 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 
 export function HeroSection() {
+  const scrollToServices = () => {
+    const servicesSection = document.getElementById("services")
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
   return (
     <section className="relative bg-gradient-to-br from-focus-black via-focus-black/95 to-focus-orange/20 py-20 md:py-28 lg:py-32">
       <style>{`
@@ -35,7 +44,11 @@ export function HeroSection() {
               Oferecemos serviços de ponta para ajudar sua empresa a crescer e ter sucesso no mercado competitivo atual.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="bg-focus-orange hover:bg-focus-orange/90 text-white">
+              <Button
+                size="lg"
+                className="bg-focus-orange hover:bg-focus-orange/90 text-white"
+                onClick={scrollToServices}
+              >
                 Nossos Serviços
               </Button>
               <Button
