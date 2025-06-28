@@ -11,9 +11,15 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const scrollToServices = () => {
-    const servicesSection = document.getElementById("services")
-    if (servicesSection) {
-      servicesSection.scrollIntoView({ behavior: "smooth" })
+    // Check if we're on the home page
+    if (window.location.pathname === "/") {
+      const servicesSection = document.getElementById("services")
+      if (servicesSection) {
+        servicesSection.scrollIntoView({ behavior: "smooth" })
+      }
+    } else {
+      // Navigate to home page with services hash
+      window.location.href = "/#services"
     }
   }
 
