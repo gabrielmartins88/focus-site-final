@@ -1,61 +1,61 @@
-import { Quote } from "lucide-react"
 import Image from "next/image"
-
-const testimonials = [
-  {
-    content:
-      "A Focus transformou as operações da nossa empresa com suas soluções inovadoras. A equipe foi profissional, responsiva e entregou além das nossas expectativas.",
-    author: "Sarah Johnson",
-    role: "CEO, TechVision Inc.",
-    image: "/professional-woman-headshot.png",
-  },
-  {
-    content:
-      "Trabalhar com a Focus foi um divisor de águas para nossa empresa. A expertise deles em transformação digital nos ajudou a otimizar processos e aumentar a eficiência.",
-    author: "Michael Chen",
-    role: "CTO, Innovate Solutions",
-    image: "/professional-man-headshot.png",
-  },
-  {
-    content:
-      "A equipe da Focus entregou resultados excepcionais. A atenção aos detalhes e o compromisso com a qualidade os tornaram o parceiro perfeito para nosso projeto.",
-    author: "Emily Rodriguez",
-    role: "Diretora de Operações, Global Systems",
-    image: "/diverse-professional-woman-headshots.png",
-  },
-]
 
 export function TestimonialsSection() {
   return (
-    <section className="py-16 md:py-24 bg-focus-black text-white">
-      <div className="container">
-        <div className="mx-auto max-w-2xl text-center mb-12 md:mb-16">
-          <h2 className="font-display text-3xl font-bold tracking-tight sm:text-4xl">O Que Nossos Clientes Dizem</h2>
-          <p className="mt-4 text-lg text-gray-300">
-            Não acredite apenas em nossa palavra - veja o que alguns de nossos clientes satisfeitos têm a dizer
-          </p>
-        </div>
+    <section className="bg-gray-100 py-16">
+      <div className="container mx-auto text-center">
+        <h2 className="text-3xl font-semibold mb-8">What Our Clients Say</h2>
 
-        <div className="grid gap-8 md:grid-cols-3">
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="relative rounded-lg bg-white/5 p-6 backdrop-blur-sm border border-white/10">
-              <Quote className="h-8 w-8 text-focus-orange mb-4" />
-              <p className="mb-6 text-gray-300">"{testimonial.content}"</p>
-              <div className="flex items-center">
-                <Image
-                  src={testimonial.image || "/placeholder.svg"}
-                  alt={testimonial.author}
-                  width={48}
-                  height={48}
-                  className="rounded-full mr-4"
-                />
-                <div>
-                  <div className="font-medium">{testimonial.author}</div>
-                  <div className="text-sm text-gray-400">{testimonial.role}</div>
-                </div>
-              </div>
-            </div>
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Testimonial 1 */}
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <Image
+              src="/professional-man-headshot.png"
+              alt="Client 1"
+              width={80}
+              height={80}
+              className="rounded-full mx-auto mb-4"
+            />
+            <p className="text-gray-700 mb-4">
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua."
+            </p>
+            <h4 className="text-lg font-semibold">John Doe</h4>
+            <p className="text-gray-500">CEO, Company A</p>
+          </div>
+
+          {/* Testimonial 2 */}
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <Image
+              src="/professional-woman-headshot.png"
+              alt="Client 2"
+              width={80}
+              height={80}
+              className="rounded-full mx-auto mb-4"
+            />
+            <p className="text-gray-700 mb-4">
+              "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat."
+            </p>
+            <h4 className="text-lg font-semibold">Jane Smith</h4>
+            <p className="text-gray-500">Marketing Manager, Company B</p>
+          </div>
+
+          {/* Testimonial 3 */}
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <Image
+              src="/diverse-professional-woman-headshots.png"
+              alt="Client 3"
+              width={80}
+              height={80}
+              className="rounded-full mx-auto mb-4"
+            />
+            <p className="text-gray-700 mb-4">
+              "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+            </p>
+            <h4 className="text-lg font-semibold">Alice Johnson</h4>
+            <p className="text-gray-500">Project Lead, Company C</p>
+          </div>
         </div>
       </div>
     </section>

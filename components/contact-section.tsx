@@ -1,135 +1,80 @@
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Mail, MapPin, Phone, Instagram } from "lucide-react"
-import Link from "next/link"
-
-export function ContactSection() {
+const ContactSection = () => {
   return (
-    <section className="py-16 md:py-24">
-      <div className="container">
-        <div className="mx-auto max-w-2xl text-center mb-12 md:mb-16">
-          <h2 className="font-display text-3xl font-bold tracking-tight text-focus-black sm:text-4xl">
-            Entre em Contato
-          </h2>
-          <p className="mt-4 text-lg text-gray-600">
-            Estamos prontos para atender às suas necessidades e responder a todas as suas perguntas
-          </p>
+    <section id="contact" className="py-20 bg-gray-100">
+      <div className="container mx-auto text-center">
+        <h2 className="text-3xl font-semibold mb-6">Contact Us</h2>
+        <p className="text-gray-700 mb-8">
+          We'd love to hear from you! Please fill out the form below or reach out to us through our social media
+          channels.
+        </p>
+
+        <div className="max-w-lg mx-auto">
+          <form className="space-y-4">
+            <div>
+              <label htmlFor="name" className="block text-gray-700 text-sm font-bold mb-2 text-left">
+                Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                placeholder="Your Name"
+              />
+            </div>
+            <div>
+              <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2 text-left">
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                placeholder="Your Email"
+              />
+            </div>
+            <div>
+              <label htmlFor="message" className="block text-gray-700 text-sm font-bold mb-2 text-left">
+                Message
+              </label>
+              <textarea
+                id="message"
+                rows="4"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                placeholder="Your Message"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            >
+              Send Message
+            </button>
+          </form>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <div className="space-y-8 lg:col-span-1">
-            <div className="rounded-lg bg-gray-50 p-6">
-              <h3 className="text-xl font-bold mb-4">Informações de Contato</h3>
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <MapPin className="h-5 w-5 text-focus-orange mr-3 mt-1 flex-shrink-0" />
-                  <div>
-                    <p className="font-medium">Endereço</p>
-                    <p className="text-gray-600">
-                      Av. Empresarial, 123
-                      <br />
-                      São Paulo, SP 04000-000
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <Phone className="h-5 w-5 text-focus-orange mr-3 mt-1 flex-shrink-0" />
-                  <div>
-                    <p className="font-medium">Telefone</p>
-                    <Link href="tel:+551123456789" className="text-gray-600 hover:text-focus-orange">
-                      (11) 2345-6789
-                    </Link>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <Mail className="h-5 w-5 text-focus-orange mr-3 mt-1 flex-shrink-0" />
-                  <div>
-                    <p className="font-medium">Email</p>
-                    <Link href="mailto:contato@focuscompany.com.br" className="text-gray-600 hover:text-focus-orange">
-                      contato@focuscompany.com.br
-                    </Link>
-                  </div>
-                </div>
-                <div className="flex items-start">
-                  <Instagram className="h-5 w-5 text-focus-orange mr-3 mt-1 flex-shrink-0" />
-                  <div>
-                    <p className="font-medium">Instagram</p>
-                    <Link
-                      href="https://www.instagram.com/focusconsultoria_rs/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-600 hover:text-focus-orange"
-                    >
-                      @focusconsultoria_rs
-                    </Link>
-                  </div>
-                </div>
-              </div>
+        <div className="mt-12">
+          <h3 className="text-xl font-semibold mb-4">Our Team</h3>
+          <div className="flex justify-center space-x-8">
+            <div className="text-center">
+              <img src="/placeholder-user.jpg" alt="Team Member 1" className="rounded-full w-24 h-24 mx-auto mb-2" />
+              <p className="font-semibold">John Doe</p>
+              <p className="text-gray-600">CEO</p>
             </div>
-
-            <div className="rounded-lg bg-gray-50 p-6">
-              <h3 className="text-xl font-bold mb-4">Horário de Atendimento</h3>
-              <div className="space-y-2">
-                <div className="flex justify-between">
-                  <span>Segunda - Sexta:</span>
-                  <span>8:00 - 18:00</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Sábado:</span>
-                  <span>9:00 - 13:00</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Domingo:</span>
-                  <span>Fechado</span>
-                </div>
-              </div>
+            <div className="text-center">
+              <img src="/placeholder-user.jpg" alt="Team Member 2" className="rounded-full w-24 h-24 mx-auto mb-2" />
+              <p className="font-semibold">Jane Smith</p>
+              <p className="text-gray-600">Marketing Manager</p>
             </div>
-          </div>
-
-          <div className="lg:col-span-2">
-            <form className="rounded-lg bg-white p-6 shadow-md">
-              <div className="grid gap-6 md:grid-cols-2">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                    Nome
-                  </label>
-                  <Input id="name" name="name" required />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                    Email
-                  </label>
-                  <Input id="email" name="email" type="email" required />
-                </div>
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                    Telefone
-                  </label>
-                  <Input id="phone" name="phone" />
-                </div>
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
-                    Assunto
-                  </label>
-                  <Input id="subject" name="subject" required />
-                </div>
-                <div className="md:col-span-2">
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                    Mensagem
-                  </label>
-                  <Textarea id="message" name="message" rows={5} required />
-                </div>
-                <div className="md:col-span-2">
-                  <Button type="submit" className="w-full bg-focus-orange hover:bg-focus-orange/90 text-white">
-                    Enviar Mensagem
-                  </Button>
-                </div>
-              </div>
-            </form>
+            <div className="text-center">
+              <img src="/placeholder-user.jpg" alt="Team Member 3" className="rounded-full w-24 h-24 mx-auto mb-2" />
+              <p className="font-semibold">Peter Jones</p>
+              <p className="text-gray-600">Software Engineer</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
   )
 }
+
+export default ContactSection
