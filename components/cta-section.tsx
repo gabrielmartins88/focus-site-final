@@ -23,13 +23,6 @@ export function CTASection() {
                   Fale Conosco
                 </Button>
               </Link>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-white text-white bg-black/20 hover:bg-white/10 hover:text-white"
-              >
-                Saiba Mais
-              </Button>
             </div>
           </div>
         </div>
