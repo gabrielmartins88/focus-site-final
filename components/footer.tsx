@@ -22,7 +22,12 @@ export function Footer() {
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-focus-orange">
+              <Link
+                href="https://www.linkedin.com/company/focus-consultoria-e-serviços-ltda/posts/?feedView=all"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-focus-orange"
+              >
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </Link>
