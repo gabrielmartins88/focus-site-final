@@ -73,15 +73,15 @@ export function HeroSection() {
                   <div className="mt-1 text-sm text-white">Anos de Experiência</div>
                 </div>
                 <div className="rounded-md bg-focus-green/10 p-4 text-center">
-                  <div className="text-3xl font-bold text-focus-green">200+</div>
-                  <div className="mt-1 text-sm text-white">Projetos Concluídos</div>
+                  <div className="text-3xl font-bold text-focus-green">20+</div>
+                  <div className="mt-1 text-sm text-white">Contratos Ativos</div>
                 </div>
                 <div className="rounded-md bg-focus-teal/10 p-4 text-center">
-                  <div className="text-3xl font-bold text-focus-teal">50+</div>
+                  <div className="text-3xl font-bold text-focus-teal">300+</div>
                   <div className="mt-1 text-sm text-white">Colaboradores</div>
                 </div>
                 <div className="rounded-md bg-focus-red/10 p-4 text-center">
-                  <div className="text-3xl font-bold text-focus-red">98%</div>
+                  <div className="text-3xl font-bold text-focus-red">95%</div>
                   <div className="mt-1 text-sm text-white">Satisfação do Cliente</div>
                 </div>
               </div>

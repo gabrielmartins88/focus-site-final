@@ -10,7 +10,7 @@ export function AboutSection() {
           </h2>
 
           <p className="mt-6 text-lg text-gray-300">
-            Somos especialistas em soluções inovadoras focadas nos resultados do seu negócio. A&nbsp;
+            Somos especialistas em soluções focadas nos resultados do seu negócio. A&nbsp;
             <span className="font-semibold text-focus-teal">FOCUS</span> une tecnologia, pessoas e processos&nbsp;—
             entregando serviços sob medida para ajudar empresas a crescer com eficiência e compliance.
           </p>

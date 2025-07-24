@@ -85,21 +85,25 @@ export function Footer() {
               <li className="flex">
                 <MapPin className="h-5 w-5 text-focus-orange mr-2 flex-shrink-0" />
                 <span className="text-gray-400">
-                  Av. Empresarial, 123
+                  Av. General Flores da Cunha, 1891 Andar 3, sala 308
                   <br />
-                  São Paulo, SP 04000-000
+                  Cachoeirinha, RS - 94910 003
                 </span>
               </li>
               <li className="flex">
                 <Phone className="h-5 w-5 text-focus-orange mr-2 flex-shrink-0" />
                 <Link href="tel:+551123456789" className="text-gray-400 hover:text-focus-orange">
-                  (11) 2345-6789
+                  (51) 99676-2055
+                  <br />
+                  (51) 99515-8649
                 </Link>
               </li>
               <li className="flex">
                 <Mail className="h-5 w-5 text-focus-orange mr-2 flex-shrink-0" />
                 <Link href="mailto:contato@focuscompany.com.br" className="text-gray-400 hover:text-focus-orange">
-                  contato@focuscompany.com.br
+                  bauer@rsfocus.com.br
+                  <br />
+                  galvao@rsfocus.com.br
                 </Link>
               </li>
             </ul>

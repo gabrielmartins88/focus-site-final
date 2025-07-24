@@ -68,15 +68,23 @@ ${formData.mensagem}
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
                     <Mail className="h-5 w-5 text-focus-orange" />
-                    <span className="text-gray-700">contato@rsfocus.com.br</span>
+                    <span className="text-gray-700">
+                      bauer@rsfocus.com.br
+                      <br />
+                      galvao@rsfocus.com.br
+                    </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <Phone className="h-5 w-5 text-focus-orange" />
-                    <span className="text-gray-700">(11) 9999-9999</span>
+                    <span className="text-gray-700">
+                      (51) 99676-2055
+                      <br />
+                      (51) 99515-8649
+                    </span>
                   </div>
                   <div className="flex items-center space-x-3">
                     <MapPin className="h-5 w-5 text-focus-orange" />
-                    <span className="text-gray-700">São Paulo, SP - Brasil</span>
+                    <span className="text-gray-700">Cachoeirinha, RS - Brasil</span>
                   </div>
                 </div>
               </div>
@@ -84,9 +92,9 @@ ${formData.mensagem}
               <div>
                 <h3 className="text-xl font-semibold text-focus-black mb-4">Horário de Atendimento</h3>
                 <div className="space-y-2 text-gray-700">
-                  <p>Segunda a Sexta: 8h às 18h</p>
-                  <p>Sábado: 8h às 12h</p>
-                  <p>Domingo: Fechado</p>
+                  <div>Segunda a Sexta: 8h às 18h</div>
+                  <div>Sábado: Fechado</div>
+                  <div>Domingo: Fechado</div>
                 </div>
               </div>
             </div>
