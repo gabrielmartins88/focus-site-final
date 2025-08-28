@@ -111,12 +111,12 @@ Solicitação via site Focus
                       <SelectValue placeholder="Selecione o tipo de serviço" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="consultoria">Consultoria</SelectItem>
-                      <SelectItem value="desenvolvimento">Desenvolvimento</SelectItem>
-                      <SelectItem value="suporte">Suporte Técnico</SelectItem>
-                      <SelectItem value="treinamento">Treinamento</SelectItem>
-                      <SelectItem value="auditoria">Auditoria</SelectItem>
-                      <SelectItem value="outros">Outros</SelectItem>
+                      <SelectItem value="consultoria">Limpeza e Conservação</SelectItem>
+                      <SelectItem value="desenvolvimento">Segurança Patrimonial</SelectItem>
+                      <SelectItem value="suporte">Serviços Administrativos</SelectItem>
+                      <SelectItem value="treinamento">Serviço de Recepção</SelectItem>
+                      <SelectItem value="auditoria">Serviços Operacionais</SelectItem>
+                      <SelectItem value="outros">Outros serviços</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
